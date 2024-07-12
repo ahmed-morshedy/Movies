@@ -3,30 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <title>Movie Database</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <header class="main-header">
-      <div class="logo">Movie Database</div>
+      <div class="logo"><a href="#">Movie Database</a></div>
       <nav>
         <ul>
           <li>
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">Movies</a>
+            <a href="./pages/movie.html">Movies</a>
           </li>
           <li>
-            <a href="#">Directors</a>
+            <a href="#directors">Directors</a>
           </li>
         </ul>
       </nav>
     </header>
     <section class="info-section">
-      <img
-        class="cover-img"
-        src="https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg"
-      />
+      <img class="cover-img" src="./assets//movie-9pvmdtvz4cb0xl37.jpg" />
       <h2>Discover popular movies</h2>
       <p>
         Explore our collection of timeless and blockbusters hits.<br />
@@ -43,9 +40,9 @@
           <th>Genre</th>
         </tr>
         <tr>
-          <td>Shawshank Redemption</td>
-          <td>Frank Darabont</td>
-          <td>1994</td>
+          <td><a href="pages/movie.html?id=1">Oppenheimer</a></td>
+          <td>Christopher Nolan</td>
+          <td>2023</td>
           <td>Drama</td>
         </tr>
         <tr>
@@ -98,4 +95,3 @@
     </footer>
   </body>
 </html>
-<!-- comment -->
