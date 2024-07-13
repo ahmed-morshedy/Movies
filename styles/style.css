@@ -13,6 +13,7 @@ a {
   color: #fff;
   text-decoration: none;
 }
+
 .main-header {
   background-color: rgba(225, 225, 255, 0.1);
   color: #fff;
@@ -102,7 +103,6 @@ a {
 }
 
 .form-section form {
-  /* TODO: Explain flex */
   display: flex;
   flex-direction: column;
   input,
