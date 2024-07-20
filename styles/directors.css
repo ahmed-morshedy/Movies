@@ -36,11 +36,13 @@ nav ul {
   list-style: none;
   display: flex;
   margin: 0;
-  padding: 15px 30px 15px 15px;
+  padding: 15px 30px;
 }
 
 nav ul li {
   margin: 0 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 nav ul li a {
@@ -50,8 +52,10 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #f39c12; /* Highlight color on hover */
+nav ul li:hover {
+  a {
+    color: #f39c12;
+  }
 }
 
 .menu-icon {
@@ -70,7 +74,7 @@ nav ul li a:hover {
   flex-direction: column;
   position: absolute;
   padding: 20px;
-  top: 40px;
+  top: 63px;
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
@@ -125,7 +129,7 @@ nav ul li a:hover {
 
 .grid-container {
   display: grid;
-  padding: 100px 0;
+  padding-top: 100px;
   grid-template-columns: repeat(4, 1fr);
   gap: 90px;
 }
@@ -169,17 +173,17 @@ nav ul li a:hover {
 }
 
 footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
-  padding: 20px;
+  padding: 10px 20px;
   background-color: #333;
   color: white;
 }
 
 /* Media Queries for Responsiveness */
+
 @media (max-width: 1200px) {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
@@ -191,28 +195,18 @@ footer {
   }
 }
 
-@media (max-width: 992px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .intro-directors .illustration {
-    top: 150px;
-    right: 50px;
-    width: 300px;
-  }
-
-  .intro-directors h1 {
-    font-size: 32px;
-    left: 450px;
-  }
-}
-
 @media (max-width: 1024px) {
   .main-header .logo {
     font-size: 20px;
   }
-
+  nav ul li {
+    padding-block: 10px;
+    border-bottom: 2px solid #9e9e9e;
+    cursor: pointer;
+    &:hover {
+      background-color: #948e8e;
+    }
+  }
   .menu-icon {
     display: block;
     position: absolute;
@@ -255,9 +249,24 @@ footer {
   }
 }
 
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-directors .illustration {
+    top: 150px;
+    right: 50px;
+    width: 300px;
+  }
+
+  .intro-directors h1 {
+    font-size: 32px;
+  }
+}
+
 @media (max-width: 576px) {
-  .header,
-  .footer,
+  header,
   .director-listing {
     padding: 20px;
   }
@@ -268,6 +277,10 @@ footer {
 
   .grid-container {
     gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    .director-card {
+      margin-bottom: 30px;
+    }
   }
 
   .director-card img {
